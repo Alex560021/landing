@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+
+<style>
+
+* { box-sizing: border-box;}
+body {margin: 0%;}  
+
+body{
+  font-size: 1.12em;
+  min-height: 100vh;
+  background-image:linear-gradient(
+  hsl(0,0%,0%),
+  rgb(0, 0, 0));
+}
+
+.portada{
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(pc128.jpeg);
+    background-size: cover;
+    height: 80vh;
+    color: rgb(255, 0, 0);  
+    animation: portada 2.5s;
+}
+
+.boton {
+ 
+    font-size: xx-small;
+    background-color: rgb(0, 0, 0);
+    padding: 0.5em;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
+    font-size:  100%;
+    animation: boton 1.5s;
+}
+
+.letras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3em;
+    color: rgb(255, 0, 0);
+    animation: letras 1.5s;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    animation: logo 1.5s;
+}
+
+
+@keyframes portada {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
+@keyframes letras {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
+@keyframes boton {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
+@keyframes logo {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
+
+
+
+.cartas {
+        display: flex;
+        gap: 2em;
+        padding: 10em 10em;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .carta {
+        width: 300px;
+        height: 400px;
+        display: grid;
+        perspective: 800px; 
+    }
+
+    .carta-delante, .carta-atras {
+        grid-area: 1/1/1/1;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: transform 1s;
+    }
+
+    .carta-delante {
+        padding: 0.5em 0.5em;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        width: 300px;
+        height: 400px;
+        box-shadow: 0px 0px 10px rgb(205, 193, 193);
+    }
+
+    .carta-atras {
+        padding: 0.5em 0.5em;
+        background-color: rgb(255, 255, 255);
+        transform: rotateY(-180deg);
+        width: 300px;
+        height: 400px;
+        
+    }
+
+    .carta:hover .carta-delante {
+        transform: rotateY(180deg);
+    }
+    .carta:hover .carta-atras {
+        transform: rotateY(0deg);
+    }
+
+    .tecladoo {
+        width: 290px;
+        height: 200px;
+       
+
+    }
+
+
+     
+
+</style>
+
+    <div class="portada">
+
+    <img class="logo" src="logo.svg"> 
+    
+    <div class="letras">
+        <a>HARDSHOP</a>
+    </div>
+
+    <div class="boton">
+        <a>Ofertas</a>
+    </div> 
+
+</div>
+
+<div class="cartas">
+
+    <div class="carta">
+        <div class="carta-delante">
+            <img class="tecladoo" src="teclado293.jpg"> 
+            NEWSKILL SUIKO IVORY
+        </div>
+        <div class="carta-atras">
+            <p>Suiko Ivory, nuestro primer teclado mecánico blanco que tanto estabais pidiendo, por fin ha llegado. Con Suiko podremos configurar más de 20 modos distintos de iluminación, divididos en ciclos en su borde exterior, modos cíclicos de ?respiración? y varios modos interactivos.</p>
+            <p>Precio:69,95€</p>
+        </div>
+    </div>
+
+    <div class="carta">
+        <div class="carta-delante">
+            <img class="tecladoo" src="placabase1.jpg"> 
+            ASUS ROG STRIX B550-F
+        </div>
+        <div class="carta-atras">
+            <p>Las placas base de la serie ROG Strix B550 Gaming ofrecen buena parte de las características que puedes encontrar en la serie de gama alta ROG Strix X570 Gaming, como por ejemplo PCIe® 4.0. Con un suministro de energía potente y una refrigeración eficaz, la serie ROG Strix B550 Gaming está optimizada para las CPU AMD Ryzen™ de 3.ª Gen. </p>
+            <p>Precio:189,90€</p>
+        </div>
+    </div>    
+    
+    <div class="carta">
+        <div class="carta-delante">
+            <img class="tecladoo" src="raton2.jpg"> 
+            LOGITECH G401
+        </div>
+        <div class="carta-atras">
+            <p>Logitech® G402 Hyperion Fury es el ratón para gaming mas rápido del mundo, con tecnología de sensor Motor Fusion que puede seguir sus movimientos a velocidades superiores a 420 IPS (10 m/s).</p>
+            <p>Precio:47,99€</p>
+        </div>
+    </div> 
+    
+    <div class="carta">
+        <div class="carta-delante">
+            <img class="tecladoo" src="placabase3.jpg"> 
+            MSI B450M-A PRO MAX
+        </div>
+        <div class="carta-atras">
+            <p>Placa base AMD AM4 inspirada en el diseño arquitectónico, con Core Boost, DDR4 Boost, Turbo M.2, USB 3.2 Gen1</p>
+            <p>Precio:49,90€</p>
+        </div>
+    </div>    
+
+    <div class="carta">
+        <div class="carta-delante">
+            <img class="tecladoo" src="raton3.jpg"> 
+            HYPERX PULSEFIRE DART
+        </div>
+        <div class="carta-atras">
+            <p>El HyperX Pulsefire Dart™ es un ratón inalámbrico para juegos con una conexión RF fiable de 2,4GHz que te hará preguntarte por qué no te deshiciste antes del cable. </p>
+            <p>Precio:118,99€</p>
+        </div>
+    </div>    
+
+    <div class="carta">
+        <div class="carta-delante">
+            <img class="tecladoo" src="teclado3.jpg"> 
+            VIGOR GK50 ELITE
+        </div>
+        <div class="carta-atras">
+            <p>MSI Vigor GK50 Elite es un teclado mecánico con interruptores mecánicos que proporcionan velocidad, precisión y resistencia para jugadores. </p>
+            <p>Precio:84,99€</p>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+<style>
+    .section2 {
+        display: flex;
+        flex-direction: column;
+        gap: 8em;
+        padding: 3em 5em;
+        color: rgb(255, 0, 0);
+    }
+    .postal {
+        display: flex;
+        justify-content: space-between;
+        transform: translateX(-100%);
+        transition: transform 1s;
+        padding: 0.5em 0.5em;
+    }
+    .postal:nth-child(odd){
+        flex-direction: row-reverse;
+        transform: translateX(100%);
+        background-color: rgb(255, 255, 255);
+    }
+    .postal.animada{
+        transform: translateX(0);
+    }
+    .postal img {
+        width: 400px;
+    }
+    .postal div {
+        display: flex;
+        flex-direction: column;
+    }
+    </style>
+    
+    <div class="section2">
+        <div class="postal">
+            <img src="teclado10.png">
+            <div>
+                <h1>NEWSKILL SERIKE TKL</h1>
+                <p>11 modos de retroiluminación RGB en sus laterales</p>
+                <p>5 modos de fondo interactivo</p>
+                <p>Teclas totalmente programables con grabación de macros sobre la marcha</p>
+                <p>Tecnología de interruptores mecánicos, más de 50 millones de pulsaciones de teclas aseguradas</p>
+                <p>Precio=49.99€</p>
+            </div>
+        </div>
+        <div class="postal">
+            <img src="placabase14.png">
+            <div>
+                <h1>ASUS PRIME B450M-A II</h1>
+                <p>Refrigeración completa: Disipador VRM, disipador PCH y Fan Xpert 2+</p>
+                <p>Conectividad ultrarrápida: Compatibilidad con M.2, Ethernet de 1 Gb y USB 3.2 Gen 2 Tipo A</p>
+                <p>5X Protection III: Múltiples protecciones de hardware para la protección integral del sistema</p>
+                <p>Iluminación Aura Sync RGB: Conector integrado para tiras de LED RGB, que se sincroniza fácilmente con una variedad cada vez mayor de hardware compatible con Aura Sync</p>
+                <p>Precio=79,99€</p>    
+            </div>
+        </div>
+        <div class="postal">
+            <img src="raton12.jpg">
+            <div>
+                <h1>RAZER DEATHADDER V1</h1>
+                <p>Sensor óptico de 16.000 ppp reales</p>
+                <p>Hasta 450 IPS /50 g de aceleración</p>
+                <p>Switches mecánicos Razer para ratón</p>
+                <p>Diseño ergonómico para diestros con agarres laterales de goma texturizada</p>
+                <p>Iluminación Razer Chroma™ con 16,8 millones de opciones de color personalizables</p>
+                <p>Precio=79,99€</p>
+            </div>   
+        </div>
+        <div class="postal">
+            <img src="teclado14.webp">
+            <div>
+                <h1>LOGITECH G213</h1>
+                <p>Uso simultáneo de teclas para mayor rendimiento</p>
+                <p>Zonas de iluminación RGB brillantes y nítidas</p>
+                <p>Resistente a salpicaduras y duradero</p>
+                <p>Reposamanos integrado y patas ajustables</p>
+                <p>Controles multimedia específicos</p>
+                <p>Precio=49,99€</p>   
+            </div>   
+        </div>
+        <div class="postal">
+            <img src="placabase91.png">
+            <div>
+                <h1>MSI MAG B550M</h1>
+                <p>Soporte para procesadores AMD Ryzen ™ de tercera generación y futuros procesadores AMD Ryzen ™ con actualización del BIOS</p>
+                <p>Admite memoria DDR4, hasta 4400+ (OC) MHz</p>
+                <p>Experiencia Lightning Fast Game: PCIe 4.0, Lightning Gen 4 x4 M.2 con M.2 Shield Frozr</p>
+                <p>Diseño de potencia mejorado: 4 + 2 + 1 Duet Rail Power System, PWM digital, Core Boost, DDR4 Boost</p>
+                <p>Precio=111,90€</p>   
+            </div>   
+        </div>
+        <div class="postal">
+            <img src="raton16.png">
+            <div>
+                <h1>Logitech B100</h1>
+                <p>Cómodo, diseño ambidiestro La forma cómoda y de bajo perfil se siente bien en cualquier mano, incluso después de un largo día de trabajo</p>
+                <p>800 dpi precisión óptica Disfrutará suave, control preciso del cursor que permite editar documentos y navegar por la Web de manera más eficiente.</p>
+                <p>configuración Zero  Funciona nada más sacarlo de la caja, basta conectarla al puerto USB y ya está listo para los negocios.</p>
+                <p>Precio=4,99€</p>   
+            </div>   
+        </div>
+    </div>
+    
+    <script>
+        const observador = new IntersectionObserver(elementos => 
+            elementos.forEach(elemento => { if(elemento.isIntersecting) elemento.target.classList.add("animada")})
+        );
+    
+        document.querySelectorAll(".postal").forEach(postal => observador.observe(postal) );
+    </script>
+
+
+
+
+<!DOCTYPE html>
+<head></head>
+
+<style>
+    .section3 {
+        display: grid;
+        place-items: center;
+        padding: 3em 5em;
+    }
+    
+    .central {
+        grid-area: 1/1/1/1;
+        background-image: url(fondobolaa.jpg);
+        background-size: cover;
+        background-color: red;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: blanchedalmond;
+        size: 100px;
+    }
+    
+    .tozo {
+        grid-area: 1/1/1/1;
+        background-size: cover;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        z-index: -1000;
+        transition: transform 1s ease-out;
+    }
+    
+    .t1.animado {
+        transform: translate(400px, -100px);
+        background-image: url(pacabase.jpeg);
+        background-size: cover;
+        text-align: center;
+        color: blanchedalmond;
+    }
+    
+    .t2.animado {
+        transform: translate(-400px, -100px);
+        background-image: url(raton.jpeg);
+    }
+    
+    .t3.animado {
+        transform: translate(400px, 100px);
+        background-image: url(teclado.jpg);
+    }
+    
+    .t4.animado {
+        transform: translate(-400px, 100px);
+        background-image: url(pc.jpeg);
+    }
+    </style>
+    
+    <div class="section3">
+        <div class="central">
+            <h1>PRODUCTOS</h1>
+        </div>
+        <div class="tozo t1"></div>
+        <div class="tozo t2"></div>
+        <div class="tozo t3"></div>
+        <div class="tozo t4"></div>
+    </div>
+    
+   
+
+    <script>
+        document.querySelectorAll(".section3").forEach(seccion => {
+            seccion.onclick = () => { 
+                seccion.querySelectorAll(".tozo").forEach(tozo => {
+                    tozo.classList.add("animado");
+                })
+            };
+        });
+    </script>
+
+
+
+<!DOCTYPE html>
+
+<style>
+
+    .caja { 
+        display: flex;
+        justify-content: space-between;
+        padding: 0.1em 1em;
+        height: 300px;
+        font-family: sans-serif; 
+        font-size: 18px; 
+        font-weight: 400; 
+        color: #000000; 
+        background:#ffffff 
+        
+    }
+
+
+</style>
+    
+    
+    
+    <div class="caja">
+       
+
+    <div>
+        <h1>INFORMACION</h1>
+        <p>¿Cómo comprar?</p>
+        <p>Formas de pago y entrega</p>
+        <p>Devoluciones y reembolso</p>
+        <p>¿Quiénes somos?</p>
+    </div>
+
+
+
+
+    <div>
+        <h1>SERVICIOS</h1>
+        <p>Reparación de ordenadores</p>
+        <p>Promociones</p>
+        <p>Canjea tu promo</p>
+        <p>Trabaja con nosotros</p>
+    </div>
+
+
+
+
+    <div>
+        <h1>INFORMACIÓN CONTACTO</h1>
+        <p>YouTube:hardshop</p>
+        <p>Telefono:934 379 014</p>
+        <p>Instagram:@hardshop</p>
+        <p>Correo:hardshop@gmail.com</p>
+    </div>
+
+
+
+    </div>
+   
